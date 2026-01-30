@@ -1,0 +1,14 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+
+# Local build/temp files
+node_modules/
+dist/
+build/
+*.log

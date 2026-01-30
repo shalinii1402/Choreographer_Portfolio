@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Modern Movement Choreography</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="brand">
+                <img src="assets/images/logo.png" alt="Logo" class="brand-logo">
+                <span class="brand-name text-gradient">Modern Movement</span>
+            </a>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home 1</a></li>
+                    <li><a href="home-2.html">Home 2</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="workshops.html">Workshops</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-compact">Login</a>
+                <a href="signup.html" class="btn btn-primary btn-compact">Signup</a>
+                <div class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Intro -->
+    <section class="section" style="padding-top: 150px; text-align: center;">
+        <div class="container">
+            <h1 data-reveal>Our Creative <span class="text-gradient">Services</span></h1>
+            <p data-reveal style="max-width: 600px; margin: 0 auto;">Transforming concepts into cinematic choreography
+                for stages and screens.</p>
+        </div>
+    </section>
+
+    <!-- Service Overview Grid -->
+    <section class="section" style="padding-bottom: 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px;">
+                <a href="#commercial" class="service-overview-card" data-reveal>
+                    <i class="fas fa-video service-overview-icon"></i>
+                    <h4>Commercial</h4>
+                    <p style="font-size: 0.9rem; margin: 0;">Music Videos & TV</p>
+                </a>
+                <a href="#production" class="service-overview-card" data-reveal>
+                    <i class="fas fa-theater-masks service-overview-icon"></i>
+                    <h4>Production</h4>
+                    <p style="font-size: 0.9rem; margin: 0;">Live Stage Shows</p>
+                </a>
+                <a href="#coaching" class="service-overview-card" data-reveal>
+                    <i class="fas fa-user-friends service-overview-icon"></i>
+                    <h4>Coaching</h4>
+                    <p style="font-size: 0.9rem; margin: 0;">1-on-1 Mentorship</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Sections with Alternating Layout -->
+    <section class="section">
+        <div class="container">
+            <!-- Service 1 -->
+            <div id="commercial"
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; margin-bottom: 120px;">
+                <div class="service-img" data-reveal style="border-radius: 20px; overflow: hidden; height: 500px;">
+                    <img src="https://images.pexels.com/photos/28383696/pexels-photo-28383696.jpeg"
+                        alt="Commercial Choreography" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="service-content" data-reveal style="text-align: center;">
+                    <h2 class="text-gradient" style="margin-bottom: 30px;">Commercial Choreography</h2>
+                    <p>High-end choreography tailored for music videos, television commercials, and large-scale brand
+                        activations.</p>
+                    <p>We specialize in creating viral movement trends that align perfectly with your musical identity
+                        and visual aesthetic.</p>
+                    <p>From concept development to on-set direction, our team ensures every shot captures the dynamic
+                        energy of the performance.</p>
+                    <a href="contact.html" class="btn btn-primary" style="margin-top: 20px;">Book Commercial Project</a>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div id="production"
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; margin-bottom: 120px;">
+                <div class="service-content" data-reveal style="text-align: center;">
+                    <h2 class="text-gradient" style="margin-bottom: 30px;">Stage Production</h2>
+                    <p>Complete movement direction for theatrical productions, live concerts, touring shows, and award
+                        ceremonies.</p>
+                    <p>We manage everything from casting professional dancers to blocking complex formations and
+                        rehearsal management.</p>
+                    <p>Our expertise extends to collaborating with lighting and set designers to create a cohesive,
+                        immersive live experience.</p>
+                    <a href="contact.html" class="btn btn-primary" style="margin-top: 20px;">Discuss Production</a>
+                </div>
+                <div class="service-img" data-reveal
+                    style="border-radius: 20px; overflow: hidden; height: 500px; order: -1;">
+                    <img src="https://images.pexels.com/photos/21311036/pexels-photo-21311036.jpeg"
+                        alt="Stage Production" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div id="coaching" style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+                <div class="service-img" data-reveal style="border-radius: 20px; overflow: hidden; height: 500px;">
+                    <img src="https://images.pexels.com/photos/7447313/pexels-photo-7447313.jpeg" alt="Private Coaching"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div class="service-content" data-reveal style="text-align: center;">
+                    <h2 class="text-gradient" style="margin-bottom: 30px;">Private Coaching</h2>
+                    <p>Personalized training sessions designed to refine your individual style, technical capability,
+                        and
+                        performance quality.</p>
+                    <p>Whether you're preparing for an audition or looking to break through a plateau, our mentors
+                        provide targeted feedback.</p>
+                    <p>We offer both in-studio and virtual coaching packages to suit your schedule and specific career
+                        goals.</p>
+                    <a href="workshops.html" class="btn btn-primary" style="margin-top: 20px;">Start Coaching</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Testimonials -->
+    <section class="section" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <h2 class="section-title text-gradient" data-reveal style="text-align: center; margin-bottom: 60px;">What
+                Clients Say</h2>
+            <div class="card-grid">
+                <div class="testimonial-card-small" data-reveal>
+                    <div class="testimonial-header">
+                        <img src="assets/images/user_dance_portrait.png" alt="Sarah J" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Sarah Jenkins</h4>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="font-style: italic; font-size: 0.95rem;">"The team's vision transformed our music video.
+                        Professional, creative, and efficient."</p>
+                </div>
+                <div class="testimonial-card-small" data-reveal>
+                    <div class="testimonial-header">
+                        <img src="assets/images/urban_crew.png" alt="Mike T" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Mike Thompson</h4>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="font-style: italic; font-size: 0.95rem;">"Best production management I've worked with. The
+                        live show ran flawlessly."</p>
+                </div>
+                <div class="testimonial-card-small" data-reveal>
+                    <div class="testimonial-header">
+                        <img src="assets/images/workshop_studio.png" alt="Elena R" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Elena Rodriguez</h4>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="font-style: italic; font-size: 0.95rem;">"Private coaching completely changed my
+                        technique. Highly recommend for serious dancers."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Brand -->
+                <div class="footer-brand">
+                    <a href="index.html" class="brand">
+                        <img src="assets/images/logo.png" alt="Logo" class="brand-logo">
+                        <span class="brand-name text-gradient">Modern Movement</span>
+                    </a>
+                    <p>Redefining choreography with cinematic vision and technical precision.</p>
+                </div>
+                <!-- Column 2: Quick Links -->
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="home-2.html">Home 2</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3: Resources -->
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="workshops.html">Workshops</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4: Contact Info -->
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info-list">
+                        <p><i class="fas fa-envelope"></i> hello@modernmovement.com</p>
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-location-dot"></i> 123 Creative Way, NY 10001</p>
+                    </div>
+                </div>
+                <!-- Column 5: Social Icons -->
+                <div class="footer-column">
+                    <h4>Follow Us</h4>
+                    <div class="footer-social-icons">
+                        <a href="#" class="footer-social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer-social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="footer-social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Modern Movement Choreography. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
