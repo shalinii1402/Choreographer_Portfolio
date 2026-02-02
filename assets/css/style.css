@@ -499,15 +499,14 @@ body.light-theme .footer-bottom {
 
 /* Login/Signup Pages */
 .auth-page {
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
     background: var(--bg-dark);
     margin: 0;
-    overflow-y: auto;
-    /* Allow vertical scrolling */
+    padding: 40px 0;
 }
 
 .auth-card {
@@ -794,13 +793,14 @@ body.light-theme .btn-social:hover {
         max-width: 300px;
         margin-left: auto;
         margin-right: auto;
-        gap: 15px;
+        gap: 8px;
+        /* Reduced gap */
     }
 
     .hero-btns .btn {
         width: 100%;
-        padding: 10px 20px;
-        font-size: 0.95rem;
+        padding: 8px 16px;
+        /* Further reduced padding */
     }
 
     .hero-content h1 {
