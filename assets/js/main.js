@@ -97,19 +97,29 @@ window.addEventListener('scroll', () => {
 
 // Inject Login/Signup into mobile menu if they aren't there
 const injectMobileAuth = () => {
-    if (navMenu && window.innerWidth <= 1024) {
+    if (navMenu) {
         const navUl = navMenu.querySelector('ul');
-        if (navUl && !navUl.querySelector('.mobile-auth')) {
-            const authLi = document.createElement('li');
-            authLi.className = 'mobile-auth';
-            authLi.style.marginTop = '20px';
-            authLi.style.display = 'flex';
-            authLi.style.gap = '10px';
-            authLi.innerHTML = `
-                <a href="login.html" class="btn btn-outline btn-compact">Login</a>
-                <a href="signup.html" class="btn btn-primary btn-compact">Signup</a>
-            `;
-            navUl.appendChild(authLi);
+        if (!navUl) return;
+
+        const existingAuth = navUl.querySelector('.mobile-auth');
+
+        if (window.innerWidth <= 1024) {
+            if (!existingAuth) {
+                const authLi = document.createElement('li');
+                authLi.className = 'mobile-auth';
+                authLi.style.marginTop = '20px';
+                authLi.style.display = 'flex';
+                authLi.style.gap = '10px';
+                authLi.innerHTML = `
+                    <a href="login.html" class="btn btn-outline btn-compact">Login</a>
+                    <a href="signup.html" class="btn btn-primary btn-compact">Signup</a>
+                `;
+                navUl.appendChild(authLi);
+            }
+        } else {
+            if (existingAuth) {
+                existingAuth.remove();
+            }
         }
     }
 };

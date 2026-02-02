@@ -339,7 +339,7 @@ body.light-theme footer {
 
 @media (max-width: 576px) {
     .footer-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
     }
 }
 
@@ -433,6 +433,12 @@ body.light-theme .footer-social-link {
     border-color: var(--primary-color);
 }
 
+body.light-theme .footer-social-link:hover {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
 .footer-bottom {
     padding-top: 25px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -500,7 +506,8 @@ body.light-theme .footer-bottom {
     justify-content: center;
     background: var(--bg-dark);
     margin: 0;
-    overflow: hidden;
+    overflow-y: auto;
+    /* Allow vertical scrolling */
 }
 
 .auth-card {
@@ -698,6 +705,7 @@ body.light-theme .btn-social {
 .btn-social:hover {
     background: rgba(255, 255, 255, 0.08);
     border-color: var(--primary-color);
+    transform: translateY(-2px);
 }
 
 body.light-theme .btn-social:hover {
@@ -768,6 +776,11 @@ body.light-theme .btn-social:hover {
         display: block;
         padding: 5px 0;
     }
+
+    /* Center buttons on tablet */
+    .hero-actions-row {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 768px) {
@@ -786,7 +799,8 @@ body.light-theme .btn-social:hover {
 
     .hero-btns .btn {
         width: 100%;
-        padding: 14px 24px;
+        padding: 10px 20px;
+        font-size: 0.95rem;
     }
 
     .hero-content h1 {
@@ -820,7 +834,7 @@ body.light-theme .btn-social:hover {
     }
 
     .footer-grid {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: 1fr 1fr !important;
         gap: 40px;
         padding: 0 10px;
     }
@@ -1112,4 +1126,16 @@ body.light-theme .testimonial-card-small {
     color: var(--secondary-color);
     font-size: 0.9rem;
     margin-top: 5px;
+}
+
+/* Contact Page Social Icons */
+.contact-social-link {
+    color: var(--text-muted);
+    transition: var(--transition-smooth);
+    display: inline-block;
+}
+
+.contact-social-link:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
 }
