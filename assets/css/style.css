@@ -138,6 +138,7 @@ header .container {
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+    width: 100%;
 }
 
 .brand {
@@ -145,6 +146,7 @@ header .container {
     align-items: center;
     gap: 12px;
     flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .brand-logo {
@@ -167,6 +169,7 @@ body:not(.light-theme) .brand-logo {
     font-weight: 700;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+    line-height: 1;
 }
 
 nav#nav-menu {
@@ -325,15 +328,23 @@ body.light-theme footer {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1.5fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
     gap: 30px;
     margin-bottom: 40px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1100px) {
     .footer-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
         gap: 40px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 900px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
     }
 }
 
@@ -352,7 +363,7 @@ body.light-theme footer {
     }
 
     footer .container {
-        padding: 0 20px;
+        padding: 0 16px;
         max-width: 100%;
     }
 
@@ -436,7 +447,9 @@ body.light-theme footer {
 }
 
 .footer-brand .brand-name {
-    white-space: nowrap;
+    white-space: normal;
+    /* Allow wrapping if needed */
+    line-height: 1.2;
 }
 
 .footer-brand .brand-logo {
@@ -448,7 +461,14 @@ body.light-theme footer {
     color: var(--text-muted);
     font-size: 0.9rem;
     line-height: 1.6;
-    max-width: 260px;
+    max-width: 100%;
+    /* Allow it to fill the column */
+    margin-top: 10px;
+}
+
+.footer-column {
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .footer-column h4 {
@@ -588,7 +608,7 @@ body.light-theme .footer-bottom {
 /* Login/Signup Pages */
 .auth-page {
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -803,8 +823,12 @@ body.light-theme .btn-social:hover {
 /* Mobile Adjustments */
 .mobile-menu-btn {
     display: none;
-    font-size: 1.4rem;
+    width: 38px;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    font-size: 1.4rem;
 }
 
 @media (max-width: 992px) {
@@ -819,15 +843,28 @@ body.light-theme .btn-social:hover {
 
 @media (max-width: 1024px) {
     .mobile-menu-btn {
-        display: block;
+        display: flex;
     }
 
     /* Fixed header icons spacing */
     .header-actions {
-        gap: 10px;
+        gap: 12px;
+    }
+
+    header {
+        height: 70px;
+        padding: 0 !important;
+        /* Lock height on mobile */
+        display: flex;
+        align-items: center;
     }
 
     header .container {
+        padding: 0 16px;
+    }
+
+    /* Unify container padding for all media queries */
+    .container {
         padding: 0 16px;
     }
 
@@ -867,6 +904,38 @@ body.light-theme .btn-social:hover {
     /* Center buttons on tablet */
     .hero-actions-row {
         justify-content: center;
+    }
+
+    /* Specific Small Mobile Fixes (360px) */
+    @media (max-width: 400px) {
+        .container {
+            padding: 0 15px;
+        }
+
+        header .container {
+            padding: 0 15px;
+            gap: 5px;
+        }
+
+        .brand-logo {
+            height: 32px;
+            width: 32px;
+        }
+
+        .brand-name {
+            font-size: 1.05rem;
+        }
+
+        .header-actions {
+            gap: 8px;
+        }
+
+        .theme-toggle,
+        .mobile-menu-btn {
+            width: 34px;
+            height: 34px;
+            font-size: 1.2rem;
+        }
     }
 }
 
